@@ -9,7 +9,7 @@ public without sharing class MapKeyUtility{
     /**
     * @description prepares map of key value pairs for given map name.
     **/
-    public static void readMapSetting(Map<String, String> mapStringString, String mapName) {
+    public static void readSetting(Map<String, String> mapStringString, String mapName) {
         // if method called for same map name for two times within transaction
         // Check if value already calculated within transaction
         // not present fetch from MDT type
@@ -30,9 +30,9 @@ public without sharing class MapKeyUtility{
     /**
     * @description prepares map of key value pairs for given map name and returns.
     **/
-    public static Map<String, String> readMapSetting(String mapName) {
+    public static Map<String, String> readSetting(String mapName) {
         Map<String, String> mapStringString = new Map<String, String>();
-        MapKeyUtility.readMapSetting(mapStringString, mapName);
+        MapKeyUtility.readSetting(mapStringString, mapName);
         return mapStringString;
     }
 }
